@@ -1,0 +1,41 @@
+.navbar{
+	background-color: #402416 !important;
+}
+.nav-link{
+	color: white !important;
+}
+.navbar-brand{
+	    position: absolute;
+    left: 14px;
+    top: -5px;
+    z-index: 1;
+}
+.navbar-brand img{
+	    width: 270px;
+}
+.carousel-indicators li{
+	border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+.row{
+	margin: auto !important;
+}
+.col-12{
+	padding: 0px;
+}
+.col-6{
+	padding: 0px;
+}
+.form-home{
+	   position: absolute;
+    top: 110px;
+    display: flex;
+    right: 0;
+    left: 0;
+}
+.form-fields{
+	position: absolute;
+    top: 70px;
+    left: 24px;
+}
