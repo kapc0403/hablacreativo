@@ -1,41 +1,753 @@
-.navbar{
-	background-color: #402416 !important;
+html {
+	scroll-behavior: smooth;
 }
-.nav-link{
+
+@font-face {
+	font-family: "PT sans";
+	src: url("fuentes/PTSans 2.ttc") format("ttc");
+}
+
+@font-face {
+	font-family: "BebasNeue";
+	src: url("fuentes/BebasNeue.otf");
+}
+
+@font-face {
+	font-family: "PTSans narrow";
+	src: url("fuentes/PTSans.ttc");
+}
+
+.navbar {
+	background-color: #402416 !important;
+	font-family: 'PT sans'
+}
+
+.nav-link {
 	color: white !important;
 }
-.navbar-brand{
-	    position: absolute;
-    left: 14px;
-    top: -5px;
-    z-index: 1;
+
+.divider-vertical {
+	color: white;
+	display: flex;
+	align-items: center;
+	margin: 0px 3px;
 }
-.navbar-brand img{
-	    width: 270px;
-}
-.carousel-indicators li{
+
+.carousel-indicators li {
 	border-radius: 50%;
-    width: 15px;
-    height: 15px;
+	width: 15px;
+	height: 15px;
 }
-.row{
+
+.row {
 	margin: auto !important;
 }
-.col-12{
+
+.col-12 {
 	padding: 0px;
 }
-.col-6{
+
+.col-6 {
 	padding: 0px;
 }
-.form-home{
-	   position: absolute;
-    top: 110px;
-    display: flex;
-    right: 0;
-    left: 0;
+
+.col-sm-12 {
+	padding: 0px;
 }
-.form-fields{
+
+.color-main {
+	color: #46210d;
+}
+
+.navbar-brand {
 	position: absolute;
-    top: 70px;
-    left: 24px;
+	left: 14px;
+	top: -5px;
+	z-index: 1;
 }
+
+.send-btn {
+	background-color: #46210d;
+	border-color: #3d1d0b;
+}
+
+.send-btn:hover {
+	background-color: #46210d;
+	border-color: #3d1d0b;
+}
+
+.custom-title {
+	background-color: #E7E7E7;
+	border-radius: 8px 0px 8px 0px;
+	padding: 10px 40px;
+	color: #46210d;
+	font-size: 24px;
+	font-family: 'BebasNeue';
+	letter-spacing: 2px;
+}
+
+.text {
+	font-family: 'PTSans narrow';
+	font-size: 12px;
+	color: #605e5e;
+}
+
+.text-2 {
+	font-family: 'PTSans narrow';
+	font-style: italic;
+	margin-bottom: 0px;
+	color: #605e5e;
+	font-size: 18px;
+}
+
+.li-custom {
+	font-family: 'PTSans narrow';
+	font-style: italic;
+	margin-bottom: 4px;
+	font-size: 13px;
+	color: #615f5f;
+}
+
+.contact-div {
+	position: absolute;
+	top: 50px;
+	left: 0;
+	right: 0;
+}
+
+.footer-custom {
+	position: absolute;
+	top: 40px;
+	left: 0;
+	right: 0;
+}
+
+.footer-title {
+	color: #46210d;
+	font-family: 'BebasNeue';
+	letter-spacing: 2px;
+	margin-bottom: 18px;
+}
+
+.btn{
+	color: white !important;
+	cursor: pointer;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #b25c31; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
+/* Responsive */
+
+@media (max-width: 374px) {
+	.navbar-brand img {
+		width: 180 !important;
+	}
+	.navbar-toggler {
+		margin-left: 230px;
+	}
+	.divider-vertical {
+		display: none!important;
+	}
+	.navbar-nav {
+		margin-top: 42px;
+	}
+	.desktop {
+		display: none;
+	}
+	.form-fields {
+		position: absolute;
+		top: 56px !important;
+		left: 25px !important;
+		width: 265px !important;
+	}
+	.input-form {
+		font-size: 10px;
+		margin-bottom: 6px;
+	}
+	.p-terms {
+		font-size: 10px;
+		color: white;
+		font-weight: 100;
+		margin-bottom: 6px;
+	}
+	.text-project {
+		padding: 40px 20px 0px 20px;
+		line-height: 18px;
+		border-bottom: solid 1px #eae9e9;
+	}
+	.img-zones {
+		width: 120px;
+		margin-bottom: 20px;
+	}
+	.subsidio {
+		width: 230px;
+	}
+	.precios {
+		width: 260px;
+	}
+	.m-botton {
+		margin-bottom: 15px;
+	}
+	.contact-div {
+		top: 42px !important;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	.img-contact {
+		width: 320px;
+		height: 100%;
+	}
+	.input-contact {
+		margin-bottom: 10px;
+		font-size: 14px;
+		padding: 10px 10px 4px 10px;
+	}
+	#mapa {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	#grupo {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.footer-custom {
+		top: 20px!important;
+	}
+	.size-footer {
+		height: 600px;
+	}
+	.size-sm {
+		font-size: 10px;
+	}
+	.text-footer-mb {
+		margin-top: 0px !important;
+		color: #46210d !important;
+	}
+}
+
+@media (min-width: 375px) and (max-width: 420px) {
+	.navbar-brand img {
+		width: 200 !important;
+	}
+	.navbar-toggler {
+		margin-left: 230px;
+	}
+	.divider-vertical {
+		display: none!important;
+	}
+	.navbar-nav {
+		margin-top: 42px;
+	}
+	.desktop {
+		display: none;
+	}
+	.form-fields {
+		position: absolute;
+		top: 72px !important;
+		left: 35px !important;
+		width: 300px !important;
+	}
+	.input-form {
+		font-size: 10px;
+		margin-bottom: 6px;
+	}
+	.p-terms {
+		font-size: 10px;
+		color: white;
+		font-weight: 100;
+		margin-bottom: 6px;
+	}
+	.text-project {
+		padding: 40px 20px 0px 20px;
+		line-height: 18px;
+		border-bottom: solid 1px #eae9e9;
+	}
+	.img-zones {
+		width: 120px;
+		margin-bottom: 20px;
+	}
+	.subsidio {
+		width: 230px;
+	}
+	.precios {
+		width: 260px;
+	}
+	.m-botton {
+		margin-bottom: 15px;
+	}
+	.contact-div {
+		top: 42px !important;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	.img-contact {
+		width: 375px;
+		height: 95%;
+	}
+	.input-contact {
+		margin-bottom: 10px;
+		font-size: 14px;
+		padding: 10px 10px 4px 10px;
+	}
+	#mapa {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	#grupo {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.footer-custom {
+		top: 20px!important;
+	}
+	.size-footer {
+		height: 550px;
+	}
+	.size-sm {
+		font-size: 10px;
+	}
+	.text-footer-mb {
+		margin-top: 0px !important;
+		color: #46210d !important;
+	}
+}
+
+@media (min-width: 425px) and (max-width: 760px) {
+	.navbar-brand img {
+		width: 220 !important;
+	}
+	.navbar-toggler {
+		margin-left: 320px;
+	}
+	.divider-vertical {
+		display: none!important;
+	}
+	.navbar-nav {
+		margin-top: 50px;
+	}
+	.desktop {
+		display: none;
+	}
+	.form-fields {
+		position: absolute;
+		top: 82px !important;
+		left: 35px !important;
+		width: 350px !important;
+	}
+	.input-form {
+		font-size: 15px;
+		margin-bottom: 10px;
+	}
+	.p-terms {
+		font-size: 10px;
+		color: white;
+		font-weight: 100;
+		margin-bottom: 6px;
+	}
+	.text-project {
+		padding: 40px 20px 0px 20px;
+		line-height: 18px;
+		border-bottom: solid 1px #eae9e9;
+	}
+	.img-zones {
+		width: 120px;
+		margin-bottom: 20px;
+	}
+	.subsidio {
+		width: 230px;
+	}
+	.precios {
+		width: 260px;
+	}
+	.m-botton {
+		margin-bottom: 15px;
+		text-align: center;
+	}
+	.contact-div {
+		top: 42px !important;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	.img-contact {
+		width: 425px;
+		height: 95%;
+	}
+	.input-contact {
+		margin-bottom: 10px;
+		font-size: 14px;
+		padding: 10px 10px 4px 10px;
+	}
+	#mapa {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	#grupo {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.footer-custom {
+		top: 20px!important;
+	}
+	.size-footer {
+		height: 530px;
+	}
+	.size-sm {
+		font-size: 10px;
+	}
+	.text-footer-mb {
+		margin-top: 0px !important;
+		color: #46210d !important;
+	}
+}
+
+@media (min-width: 761px) and (max-width: 1000px) {
+	.navbar-brand img {
+		width: 220 !important;
+	}
+	.ml-auto,
+	.mx-auto {
+		margin-right: 10px !important;
+	}
+	.navbar-toggler {
+		margin-left: 320px;
+	}
+	.divider-vertical {
+		display: none!important;
+	}
+	.navbar-nav {
+		margin-top: 50px;
+	}
+	.desktop {
+		display: none;
+	}
+	.form-fields {
+		position: absolute;
+		top: 74px !important;
+		left: 25px !important;
+		width: 335px !important;
+	}
+	.input-form {
+		font-size: 14px;
+		margin-bottom: 8px;
+	}
+	.p-terms {
+		font-size: 10px;
+		color: white;
+		font-weight: 100;
+		margin-bottom: 6px;
+	}
+	.text-project {
+		padding: 40px 20px 0px 20px;
+		line-height: 18px;
+		border-bottom: solid 1px #eae9e9;
+	}
+	.img-zones {
+		width: 110px;
+		margin-bottom: 20px;
+	}
+	.subsidio {
+		width: 230px;
+	}
+	.precios {
+		width: 260px;
+	}
+	.m-botton {
+		margin-bottom: 15px;
+		text-align: center;
+	}
+	.contact-div {
+		top: 42px !important;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	.img-contact {
+		width: 768px;
+		height: 90%;
+	}
+	.input-contact {
+		margin-bottom: 10px;
+		font-size: 14px;
+		padding: 10px 10px 4px 10px;
+	}
+	#mapa {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	#grupo {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.footer-custom {
+		top: 20px!important;
+	}
+	.size-footer {
+		height: 480px;
+	}
+	.size-sm {
+		font-size: 10px;
+	}
+	.text-footer-mb {
+		margin-top: 0px !important;
+		color: #46210d !important;
+	}
+	.m1024 {
+		display: none;
+	}
+	.m1024-2 {
+		display: initial !important;
+	}
+}
+
+@media (min-width: 1024px) and (max-width: 1249px) {
+	.ml-auto,
+	.mx-auto {
+		margin-right: 10px !important;
+	}
+	.mobile {
+		display: none;
+	}
+	.navbar-brand img {
+		width: 270px;
+	}
+	.form-home {
+		position: absolute;
+		top: 60px;
+		display: flex;
+		right: 0;
+		left: 0;
+	}
+	.m1024 {
+		display: none;
+	}
+	.m1024-2 {
+		display: initial !important;
+	}
+	.form-fields {
+		position: absolute;
+		top: 72px;
+		left: 32px;
+		width: 335px;
+	}
+	.input-form {
+		font-size: 12px;
+		margin-bottom: 8px;
+	}
+	.p-terms {
+		font-size: 10px;
+		color: white;
+		font-weight: 100;
+		margin-bottom: 6px;
+	}
+	.img-zones {
+		width: 160px;
+	}
+	.input-contact {
+		margin-bottom: 14px;
+		width: 96%;
+		font-size: 12px;
+		padding: 10px 10px 4px 10px;
+	}
+	.text-project {
+		padding: 40px 80px 0px 80px;
+		line-height: 18px;
+		border-bottom: solid 1px #eae9e9;
+	}
+	.subsidio {
+		width: 480px;
+	}
+	.precios {
+		width: 700px;
+	}
+	.bottom-section {
+		margin-bottom: 20px !important;
+	}
+	.m-botton {
+		margin-bottom: 16px;
+		text-align: center;
+	}
+	.img-contact {
+		width: 1024px;
+		height: 90%;
+	}
+	.desktop {
+		display: none;
+	}
+	.mobile-secure {
+		display: initial !important;
+	}
+	.row-contact {
+		width: 655px;
+	}
+	.size-footer {
+		height: 420px;
+	}
+}
+
+@media (min-width: 1250px) and (max-width: 1399px) {
+	.ml-auto,
+	.mx-auto {
+		margin-right: 10px !important;
+	}
+	.mobile {
+		display: none;
+	}
+	.navbar-brand img {
+		width: 270px;
+	}
+	.form-home {
+		position: absolute;
+		top: 90px;
+		display: flex;
+		right: 0;
+		left: 0;
+	}
+	.m1024 {
+		display: none;
+	}
+	.m1024-2 {
+		display: initial !important;
+	}
+	.form-fields {
+		position: absolute;
+		top: 72px;
+		left: 32px;
+		width: 335px;
+	}
+	.input-form {
+		font-size: 12px;
+		margin-bottom: 8px;
+	}
+	.p-terms {
+		font-size: 10px;
+		color: white;
+		font-weight: 100;
+		margin-bottom: 6px;
+	}
+	.img-zones {
+		width: 170px;
+	}
+	.input-contact {
+		margin-bottom: 14px;
+		width: 96%;
+		font-size: 12px;
+		padding: 10px 10px 4px 10px;
+	}
+	.text-project {
+		padding: 40px 80px 0px 80px;
+		line-height: 18px;
+		border-bottom: solid 1px #eae9e9;
+	}
+	.subsidio {
+		width: 480px;
+	}
+	.precios {
+		width: 700px;
+	}
+	.bottom-section {
+		margin-bottom: 20px !important;
+	}
+	.m-botton {
+		margin-bottom: 16px;
+		text-align: center;
+	}
+	.img-contact {
+		width: 1024px;
+		height: 90%;
+	}
+	.row-contact {
+		width: 655px;
+	}
+	.size-footer {
+		height: 420px;
+	}
+	.contact-div {
+		top: 40px !important;
+	}
+	.footer-custom {
+		top: 60px !important;
+	}
+	.logo-footer {
+		margin-top: 40px !important;
+	}
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+	.mobile {
+		display: none;
+	}
+	.navbar-brand img {
+		width: 270px;
+	}
+	.form-home {
+		position: absolute;
+		top: 90px;
+		display: flex;
+		right: 0;
+		left: 0;
+	}
+	.form-fields {
+		position: absolute;
+		top: 72px;
+		left: 32px;
+		width: 335px;
+	}
+	.input-form {
+		font-size: 12px;
+		margin-bottom: 8px;
+	}
+	.p-terms {
+		font-size: 10px;
+		color: white;
+		font-weight: 100;
+		margin-bottom: 6px;
+	}
+	.img-zones {
+		width: 160px;
+	}
+	.input-contact {
+		margin-bottom: 14px;
+		width: 96%;
+		font-size: 12px;
+		padding: 10px 10px 4px 10px;
+	}
+	.text-project {
+		padding: 40px 100px 0px 100px;
+		line-height: 18px;
+		border-bottom: solid 1px #eae9e9;
+	}
+	.subsidio {
+		width: 480px;
+	}
+	.precios {
+		width: 700px;
+	}
+	.bottom-section {
+		margin-bottom: 20px !important;
+	}
+	.contact-div {
+		top: 60px !important;
+	}
+}
+
+@media (min-width: 1600px) and (max-width: 2500px) {}
+
+@media (min-width: 2501px) and (max-width: 2570px) {}

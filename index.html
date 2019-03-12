@@ -1,11 +1,12 @@
 <html>
 	<head>
 		<title>Remanso del rodeo</title>
+		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-sm navbar-light bg-light" data-toggle="affix">
+		<nav class="navbar navbar-expand-sm navbar-dark bg-light" data-toggle="affix">
 			<div class="mx-auto d-sm-flex d-block flex-sm-nowrap">
 				<a class="navbar-brand" href="#"><img src="recortes/Remanso-05.png" alt=""></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,72 +14,130 @@
 				</button>
 				<div class="collapse navbar-collapse text-center" id="navbarsExample11">
 					<ul class="navbar-nav">
-						<li class="nav-item"><a class="nav-link" href="#">Proyecto</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Galería</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Apartamentos</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Mapa</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+						<li class="nav-item"><a class="nav-link" href="#proyecto">Proyecto</a></li>
+						<li class="nav-item divider-vertical">|</li>
+						<li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+						<li class="nav-item divider-vertical">|</li>
+						<li class="nav-item"><a class="nav-link" href="#apartamentos">Apartamentos</a></li>
+						<li class="nav-item divider-vertical">|</li>
+						<li class="nav-item"><a class="nav-link" href="#mapa">Mapa</a></li>
+						<li class="nav-item divider-vertical">|</li>
+						<li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 		<div class="row">
-			<div class="col-12">
-				<img src="galeria/Remanso-43.png" alt="" class="img-fluid" style="margin-top: -1px;">
+			<div class="col-12 desktop">
+				<img src="galeria/Remanso-43.png" class="img-fluid" style="margin-top: -1px;">
 				<div class="row form-home">
 					<div class="col-6" style="text-align: right;">
-						<img src="recortes/Remanso-07.png" alt="" class="img-fluid" style="width: 370px;">
+						<img src="recortes/Remanso-07.png" alt="" class="img-fluid" style="width: 400px;">
 					</div>
 					<div class="col-6">
-						<img src="recortes/Remanso-08.png" alt="" class="img-fluid" style="width: 370px;">
+						<img src="recortes/Remanso-08.png" alt="" class="img-fluid" style="width: 400px;">
 						<form action="" class="form-fields">
-							<input type="text" class="form-control" placeholder="Nombre*">
-							<input type="text" class="form-control" placeholder="Correo Electrónico*">
-							<input type="text" class="form-control" placeholder="Teléfono*">
-							<input type="text" class="form-control" placeholder="Ciudad*">
-							<textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Comentario*"></textarea>
-							<p>Al hacer clic en enviar, estás aceptando los <b>términos y condiciones</b></p>
-							<a href="btn">Enviar</a>
+							<input type="text" class="form-control input-form" placeholder="Nombre*" id="nombre_1">
+							<input type="text" class="form-control input-form" placeholder="Correo Electrónico*" id="email_1">
+							<input type="number" class="form-control input-form" placeholder="Teléfono*" id="tel_1">
+							<input type="text" class="form-control input-form" placeholder="Ciudad*" id="ciudad_1">
+							<textarea name="" cols="30" rows="2" class="form-control input-form" placeholder="Comentario*" id="comentario_1"></textarea>
+							<div class="text-center">
+								<p class="p-terms">Al hacer clic en enviar, estás aceptando los <span style="font-weight: 800;">términos y condiciones</span></p>
+								<a class="btn btn-primary send-btn" onclick="validate_form_1();">ENVIAR</a>
+							</div>
 						</form>
 					</div>
 				</div>
 			</div>
+			<div class="col-12 mobile">
+				<img src="galeria/Remanso-43.png" class="img-fluid" style="margin-top: -1px;">
+			</div>
+			<div class="col-12 col-sm-6 col-md-6 mobile">
+				<img src="recortes/Remanso-07.png" alt="" class="img-fluid">
+			</div>
+			<div class="col-12 col-sm-6 col-md-6 mobile">
+				<img src="recortes/Remanso-08.png" alt="" class="img-fluid">
+				<form action="" class="form-fields">
+					<input type="text" class="form-control input-form" placeholder="Nombre*" id="nombre_2">
+					<input type="text" class="form-control input-form" placeholder="Correo Electrónico*" id="email_2">
+					<input type="text" class="form-control input-form" placeholder="Teléfono*" id="tel_2">
+					<input type="text" class="form-control input-form" placeholder="Ciudad*" id="ciudad_2">
+					<textarea name="" id="comentario_2" cols="30" rows="1" class="form-control input-form" placeholder="Comentario*"></textarea>
+					<div class="row">
+						<div class="col-8" style="padding: 0px;">
+							<p class="p-terms">Al hacer clic en enviar, estás aceptando los <span style="font-weight: 800;">términos y condiciones</span></p>
+						</div>
+						<div class="col-4" style="padding: 0px;">
+							<a class="btn btn-primary send-btn" onclick="validate_form_2();">ENVIAR</a>
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
-		<div class="row">
-			<div class="col-6">
+		<div class="row" style="background-color: #F5F5F5" id="proyecto">
+			<div class="col-sm-12 col-lg-6">
 				<img src="recortes/Remanso-09.png" alt="" class="img-fluid">
 			</div>
-			<div class="col-6">
-				proyecto
-				Remanso del Rodeo, un proyecto ubicado en Belén, sector Rodeo Alto, un lugar exclusivo con entorno campestre, excelente valorización y una vista inigualable sobre Rodeo Alto y gran parte de la ciudad de Medellín.
-				Cuenta con beneficios únicos de movilidad, cercanía a lugares comerciales, además de tener diferentes vías de acceso.
-				Cercano a:
-				Cínica las Américas Club el Rodeo Carrera 80 Guayabal
-				La Mota
-				Aeropuerto Olaya Herrera Parque Juan Pablo II Sector Comercial Guayabal Éxito de la Gran Vía
+			<div class="col-sm-12 col-lg-6 text-project">
+				<span class="custom-title">PROYECTO</span> <br><br><br>
+				<p class="text">Remanso del Rodeo, un proyecto ubicado en Belén, sector Rodeo Alto, un lugar exclusivo con entorno campestre, excelente valorización y una vista inigualable sobre Rodeo Alto y gran parte de la ciudad de Medellín.</p>
+				<p class="text">Cuenta con beneficios únicos de movilidad, cercanía a lugares comerciales, además de tener diferentes vías de acceso.</p>
+				<p class="text" style="margin-bottom: 3px;color: #3f3d3d;">Cercano a:</p>
+				<span class="m1024">
+					<p class="li-custom"><img src="recortes/li.png" width="15px"> Cínica las Américas</p>
+					<p class="li-custom"><img src="recortes/li.png" width="15px"> Club el Rodeo</p>
+					<p class="li-custom"><img src="recortes/li.png" width="15px"> Carrera 80</p>
+					<p class="li-custom"><img src="recortes/li.png" width="15px"> Guayabal</p>
+					<p class="li-custom"><img src="recortes/li.png" width="15px"> La Mota</p>
+					<p class="li-custom"><img src="recortes/li.png" width="15px"> Aeropuerto Olaya Herrera</p>
+					<p class="li-custom"><img src="recortes/li.png" width="15px"> Parque Juan Pablo II</p>
+					<p class="li-custom"><img src="recortes/li.png" width="15px"> Sector Comercial Guayabal</p>
+					<p class="li-custom"><img src="recortes/li.png" width="15px"> Éxito de la Gran Vía</p>
+				</span>
+				<span style="display: none;" class="m1024-2">
+					<div class="row">
+						<div class="col-6">
+							<p class="li-custom"><img src="recortes/li.png" width="15px"> Cínica las Américas</p>
+							<p class="li-custom"><img src="recortes/li.png" width="15px"> Club el Rodeo</p>
+							<p class="li-custom"><img src="recortes/li.png" width="15px"> Carrera 80</p>
+							<p class="li-custom"><img src="recortes/li.png" width="15px"> Guayabal</p>
+							<p class="li-custom"><img src="recortes/li.png" width="15px"> La Mota</p>
+						</div>
+						<div class="col-6">
+							<p class="li-custom"><img src="recortes/li.png" width="15px"> Aeropuerto Olaya Herrera</p>
+							<p class="li-custom"><img src="recortes/li.png" width="15px"> Parque Juan Pablo II</p>
+							<p class="li-custom"><img src="recortes/li.png" width="15px"> Sector Comercial Guayabal</p>
+							<p class="li-custom"><img src="recortes/li.png" width="15px"> Éxito de la Gran Vía</p>
+						</div>
+					</div>
+				</span>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-12">
-				zonas comunes
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam ipsum, cupiditate veritatis officiis laudantium impedit neque repudiandae distinctio quod laboriosam. Reiciendis doloremque consectetur obcaecati et asperiores rem autem sapiente accusantium.</p>
-				<div class="col-md-6 offset-md-3">
-					<div class="row">
-						<div class="col-3"><img src="recortes/Remanso-10.png" alt="" class="img-fluid"></div>
-						<div class="col-3"><img src="recortes/Remanso-11.png" alt="" class="img-fluid"></div>
-						<div class="col-3"><img src="recortes/Remanso-12.png" alt="" class="img-fluid"></div>
-						<div class="col-3"><img src="recortes/Remanso-13.png" alt="" class="img-fluid"></div>
+		<div class="row" style="background-color: #F5F5F5;padding-top: 50px !important;">
+			<div class="col-12 text-center">
+				<span class="custom-title">ZONAS COMÚNES</span> <br><br>
+				<p class="text-2">Un lugar exclusivo para brindarte a ti y</p>
+				<p class="text-2">a tu familia todo lo que necesitan.</p>
+				<br>
+				<div class="col-md-8 offset-md-2">
+					<div class="row bottom-section">
+						<div class="col-6 col-sm-3"><img src="recortes/Remanso-10.png" class="img-fluid img-zones"></div>
+						<div class="col-6 col-sm-3"><img src="recortes/Remanso-11.png" class="img-fluid img-zones"></div>
+						<div class="col-6 col-sm-3"><img src="recortes/Remanso-12.png" class="img-fluid img-zones"></div>
+						<div class="col-6 col-sm-3"><img src="recortes/Remanso-13.png" class="img-fluid img-zones"></div>
 					</div>
-					<div class="row">
-						<div class="col-3"><img src="recortes/Remanso-14.png" alt="" class="img-fluid"></div>
-						<div class="col-3"><img src="recortes/Remanso-15.png" alt="" class="img-fluid"></div>
-						<div class="col-3"><img src="recortes/Remanso-16.png" alt="" class="img-fluid"></div>
-						<div class="col-3"><img src="recortes/Remanso-17.png" alt="" class="img-fluid"></div>
+					<div class="row bottom-section">
+						<div class="col-6 col-sm-3"><img src="recortes/Remanso-14.png" class="img-fluid img-zones"></div>
+						<div class="col-6 col-sm-3"><img src="recortes/Remanso-15.png" class="img-fluid img-zones"></div>
+						<div class="col-6 col-sm-3"><img src="recortes/Remanso-16.png" class="img-fluid img-zones"></div>
+						<div class="col-6 col-sm-3"><img src="recortes/Remanso-17.png" class="img-fluid img-zones"></div>
 					</div>
 				</div>
+				<br> 
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" id="galeria">
 			<div class="col-12">
 				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 					<ol class="carousel-indicators">
@@ -132,45 +191,237 @@
 				</div>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" id="apartamentos">
 			<div class="col-12 text-center">
-				<img src="recortes/Remanso-18.png" alt="" class="img-fluid">
-				<img src="recortes/Remanso-19.png" alt="" class="img-fluid">
+				<img src="recortes/Remanso-18.png" class="img-fluid subsidio"><br><br>
+				<img src="recortes/Remanso-19.png" class="img-fluid precios">
 			</div>
-			<div class="col-md-6 offset-md-3" style="margin-top: 40px;">
+			<div class="col-md-8 offset-md-2" style="margin-top: 40px;">
 				<div class="row">
-					<div class="col-4"><img src="recortes/Remanso-21.png" alt="" class="img-fluid"></div>
-					<div class="col-4"><img src="recortes/Remanso-22.png" alt="" class="img-fluid"></div>
-					<div class="col-4"><img src="recortes/Remanso-23.png" alt="" class="img-fluid"></div>
+					<div class="col-12 col-sm-4 col-lg-4 m-botton"><img src="recortes/Remanso-21.png" class="img-fluid"></div>
+					<div class="col-12 col-sm-4 col-lg-4 m-botton"><img src="recortes/Remanso-22.png" class="img-fluid"></div>
+					<div class="col-12 col-sm-4 col-lg-4 m-botton"><img src="recortes/Remanso-23.png" class="img-fluid"></div>
 				</div>
-				<br>
 				<div class="row">
-					<div class="col-4"><img src="recortes/Remanso-24.png" alt="" class="img-fluid"></div>
-					<div class="col-4"><img src="recortes/Remanso-25.png" alt="" class="img-fluid"></div>
-					<div class="col-4"><img src="recortes/Remanso-26.png" alt="" class="img-fluid"></div>
+					<div class="col-12 col-sm-4 col-lg-4 m-botton"><img src="recortes/Remanso-24.png" class="img-fluid"></div>
+					<div class="col-12 col-sm-4 col-lg-4 m-botton"><img src="recortes/Remanso-25.png" class="img-fluid"></div>
+					<div class="col-12 col-sm-4 col-lg-4 m-botton"><img src="recortes/Remanso-26.png" class="img-fluid"></div>
 				</div>
 			</div>
 		</div>
+		<br><br>
 		<div class="row">
-			<div class="col-12">
+			<div class="col-12 text-center desktop">
 				<img src="recortes/Remanso-27.png" alt="" class="img-fluid">
-				contactanos
+				<div class="contact-div">
+					<span class="custom-title" style="background-color: #bc5523;">CONTÁCTANOS</span> <br><br>
+					<p class="text-2" style="color:#f2f2f2;">Déjanos tus datos y un asesor de nuestro proyecto se</p>
+					<p class="text-2" style="color:#f2f2f2;">comunicará para brindarte la mejor asesoria.</p>
+					<form action="" style="margin-top: 20px;">
+						<div class="row" style="width: 700px;">
+							<div class="col-6">
+								<input type="text" class="form-control input-contact" placeholder="Nombre*" id="nombre_4">
+							</div>
+							<div class="col-6">
+								<input type="text" class="form-control input-contact" placeholder="Ciudad*" id="ciudad_4">
+							</div>
+						</div>
+						<div class="row" style="width: 700px;">
+							<div class="col-6">
+								<input type="text" class="form-control input-contact" placeholder="Correo electrónico*" id="email_4">
+							</div>
+							<div class="col-6">
+								<input type="text" class="form-control input-contact" placeholder="Celular*" id="tel_4">
+							</div>
+						</div>
+						<div class="row" style="width: 700px;">
+							<div class="col-12">
+								<textarea style="width: 98%" cols="30" rows="4" class="form-control input-contact" placeholder="Comentario*" id="comentario_4"></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-8" style="text-align: right;padding-top: 10px;">
+								<p class="text" style="color: white;">Al hacer clic en enviar, estás aceptando los <b>términos y condiciones</b></p>
+							</div>
+							<div class="col-2" style="text-align: left;">
+								<a class="btn btn-primary send-btn" onclick="validate_form_4();">Enviar</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="col-12 text-center mobile mobile-secure">
+				<img src="recortes/Remanso-27.png" class="img-contact">
+				<div class="contact-div">
+					<span class="custom-title" style="background-color: #bc5523;">CONTÁCTANOS</span> <br><br>
+					<p class="text-2" style="color:#f2f2f2;">Déjanos tus datos y un asesor de nuestro proyecto se</p>
+					<p class="text-2" style="color:#f2f2f2;">comunicará para brindarte la mejor asesoria.</p>
+					<form action="" style="margin-top: 20px;">
+						<div class="row row-contact">
+							<div class="col-12">
+								<input type="text" class="form-control input-contact" placeholder="Nombre*" id="nombre_3">
+							</div>
+							<div class="col-12">
+								<input type="text" class="form-control input-contact" placeholder="Ciudad*" id="ciudad_3">
+							</div>
+							<div class="col-12">
+								<input type="text" class="form-control input-contact" placeholder="Correo electrónico*" id="tel_3">
+							</div>
+							<div class="col-12">
+								<input type="text" class="form-control input-contact" placeholder="Celular*" id="tel_3">
+							</div>
+							<div class="col-12">
+								<textarea cols="30" rows="4" class="form-control input-contact" placeholder="Comentario*" id="comentario_3"></textarea>
+							</div>
+						</div>
+						<div class="row row-contact">
+							<div class="col-9" style="text-align: left;padding: 10px 0px 0px 10px !important;">
+								<p class="text" style="color: white;">Al hacer clic en enviar, estás aceptando los <b>términos y condiciones</b></p>
+							</div>
+							<div class="col-3" style="text-align: center;padding: 0px;">
+								<a class="btn btn-primary send-btn" onclick="validate_form_3();">Enviar</a>
+							</div>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" style="background-color: #F5F5F5;padding-top: 40px;" id="mapa">
+			<div class="col-12 text-center">
+				<span class="custom-title">MAPA</span> <br><br>
+				<p class="text-2">Sector de Belén Rodeo Alto, cerca de la Clínica las Américas, Club el Rodeo, Parque</p>
+				<p class="text-2">Juan Pablo II, Mall comercial la Gran Vía y La Mota, Éxito de la Gran Vía y sector</p>
+				<p class="text-2">comercial de Guayabal, entre otras comodidades.</p>
+				<br>
+				<img src="recortes/Remanso-28.png" class="img-fluid" style="width: 420px;">
+				<br><br><br>
+			</div>
+		</div>
+		<div class="row" style="padding-top: 40px;" id="grupo">
+			<div class="col-12 text-center">
+				<span class="custom-title">GRUPO PROFESIONAL</span> <br><br>
+				<div class="row">
+					<div class="col-6 text-right">
+						<img src="recortes/Remanso-29.png" class="img-fluid">
+					</div>
+					<div class="col-6 text-left">
+						<img src="recortes/Remanso-30.png" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<div class="row text-center" id="contacto">
 			<div class="col-12">
-				mapa
+				<img src="recortes/Remanso-36.png" class="img-fluid size-footer">
+				<div class="footer-custom">
+					<h3 class="footer-title">SALA DE NEGOCIOS</h3>
+					<div class="col-md-10 offset-md-1">
+						<div class="row">
+							<div class="col-6 col-lg-3">
+								<img src="recortes/Remanso-31.png" class="img-fluid" style="width: 70px;">
+								<p style="margin-bottom: 0px;" class="color-main"><b>Tel:</b></p>
+								<p class="color-main size-sm">3439241 - 3137050212</p>
+							</div>
+							<div class="col-6 col-lg-3">
+								<img src="recortes/Remanso-32.png" class="img-fluid" style="width: 70px;">
+								<p style="margin-bottom: 0px;" class="color-main"><b>Dirección:</b></p>
+								<p class="color-main size-sm">Calle 6 sur # 79 - 158 Medellín</p>
+							</div>
+							<div class="col-6 col-lg-3">
+								<img src="recortes/Remanso-33.png" class="img-fluid" style="width: 70px;">
+								<p style="margin-bottom: 0px;" class="color-main"><b>Hora de Atención:</b></p>
+								<p class="color-main size-sm">10:00 am - 5:30 pm</p>
+							</div>
+							<div class="col-6 col-lg-3">
+								<img src="recortes/Remanso-34.png" class="img-fluid" style="width: 70px;">
+								<p style="margin-bottom: 0px;" class="color-main"><b>Correo:</b></p>
+								<p class="color-main size-sm">remansodelrodeo@une.net.co</p>
+							</div>
+						</div>
+						<p class="text color-main text-footer-mb" style="margin-top: 16px;color: #373636;">Las imágenes utilizadas son representaciones digitales del diseño y junto con las oficinas, locales y apartamentos pueden variar en la construcción final. El mobiliario, electrodomésticos, gasodomésticos, acabados y demás elementos que aparecen en las imágenes son una representación a fin de ilustrar la utilización de los espacios y pueden diferir de lo entregado o no ser entregado según lo convenido en los contratos. Las áreas privadas y construidas podrán sufrir ajustes y quedarán finalmente determinadas en los contratos suscritos por las partes.</p>
+						<img src="recortes/Remanso-35.png" class="img-fluid logo-footer" style="margin-top: 10px;">
+						<br>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-12">
-				grupo profesional
-			</div>
-		</div>
-		<footer>
-		</footer>
+		<button onclick="topFunction()" id="myBtn" title="Go to top">Inicio</button>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 	</body>
 </html>
+
+
+<script>
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+	    document.getElementById("myBtn").style.display = "block";
+	  } else {
+	    document.getElementById("myBtn").style.display = "none";
+	  }
+	}
+
+	function topFunction() {
+	  document.body.scrollTop = 0; // For Safari
+	  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+	}
+
+	function validate_form_1(){
+		var nombre = document.getElementById('nombre_1');
+		var email = document.getElementById('email_1');
+		var ciudad = document.getElementById('ciudad_1');
+		var telefono = document.getElementById('tel_1');
+		var comentario = document.getElementById('comentario_1');
+
+		response_form(nombre, email, ciudad, telefono, comentario);
+	}
+
+	function validate_form_2(){
+		var nombre = document.getElementById('nombre_2');
+		var email = document.getElementById('email_2');
+		var ciudad = document.getElementById('ciudad_2');
+		var telefono = document.getElementById('tel_2');
+		var comentario = document.getElementById('comentario_2');
+
+		response_form(nombre, email, ciudad, telefono, comentario);
+	}
+
+	function validate_form_3(){
+		var nombre = document.getElementById('nombre_3');
+		var email = document.getElementById('email_3');
+		var ciudad = document.getElementById('ciudad_3');
+		var telefono = document.getElementById('tel_3');
+		var comentario = document.getElementById('comentario_3');
+
+		response_form(nombre, email, ciudad, telefono, comentario);
+	}
+
+	function validate_form_4(){
+		var nombre = document.getElementById('nombre_4');
+		var email = document.getElementById('email_4');
+		var ciudad = document.getElementById('ciudad_4');
+		var telefono = document.getElementById('tel_4');
+		var comentario = document.getElementById('comentario_4');
+
+		response_form(nombre, email, ciudad, telefono, comentario);
+	}
+
+	function response_form(nombre, email, ciudad, telefono, comentario){
+		if(nombre.value && email.value && ciudad.value && telefono.value && comentario.value){
+			nombre.value = "";
+			email.value = "";
+			ciudad.value = "";
+			telefono.value = "";
+			comentario.value = "";
+			Swal.fire('Genial!','Pronto uno de nuestros asesores se comunicará contigo!','success');
+		}else{
+			Swal.fire('Oops!','Debes completar todos los datos','error');
+		}
+	}
+</script>
+
